@@ -1,4 +1,4 @@
-import 'package:bpp_seller_ans/pages/screens/Home_Screen/home_screen.dart';
+import 'package:bpp_seller_ans/pages/screens/Home_Screen/widgets/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,10 +16,9 @@ class Myapp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_,child){
-        return MaterialApp(
+        return const MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Homepage',
-          home: const Homepage(),
+          home:  Homepage(),
         );
       },
 

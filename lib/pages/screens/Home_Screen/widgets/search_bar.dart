@@ -7,21 +7,30 @@ class CustomSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.fromLTRB(6.w, 20.h,6.w , 8.h),
-      decoration: BoxDecoration(
-         color:  Color(0xFFFFFFFF),
-        // color: Colors.red,
-        borderRadius: BorderRadius.circular(5),
-      ),
-      height: 34.h,
-      width: 184.w,
-      child: SearchBar(
-        leading: Padding(
-          padding: EdgeInsets.all(10),
-          child: Image.asset("assets/icon/searchbpplogo.png",height: 25.65.h,width: 18.w,),
+    return Row(
+      children: [
+        InkWell(
+          child: Image.asset("assets/icon/drawer.png",width: 18.w,height: 18.h,),
+          onTap: (){
+          },
         ),
-      ),
+        Container(
+          margin: EdgeInsets.fromLTRB(24.w, 20.h,6.w , 8.h),
+          decoration: BoxDecoration(
+             // color:  Color(0xFFFFFFFF),
+            color: Colors.red,
+            borderRadius: BorderRadius.circular(5),
+          ),
+          height: 34.h,
+          width: 184.w,
+          // child: SearchBar(
+          //   leading: Padding(
+          //     padding: EdgeInsets.all(10),
+          //     child: Image.asset("assets/icon/searchbpplogo.png",height: 25.65.h,width: 18.w,),
+          //   ),
+          // ),
+        ),
+      ],
     );
   }
 }

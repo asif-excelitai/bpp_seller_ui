@@ -70,3 +70,11 @@
 //
 //
 //
+
+
+import 'package:flutter/material.dart';
+class BppColor{
+
+  static const Color bppmaincolor=Color(0xffFF8800);
+  static const Color bppfontcolorlight=Color(0xffFFF1F1);
+}
