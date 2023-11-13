@@ -61,6 +61,7 @@ class bppTextStyle{
     fontWeight: FontWeight.w600,
     fontSize: 50,
     fontStyle: FontStyle.normal,
+
   );
 
   static const subcategoryTextcolor=TextStyle(

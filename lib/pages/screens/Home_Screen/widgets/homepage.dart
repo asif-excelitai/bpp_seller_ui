@@ -88,7 +88,6 @@ class _HomepageState extends State<Homepage> {
             child: Column(
               children: [
                 HomepageCarousalSlider(),
-
               ],
             ),
           ),
