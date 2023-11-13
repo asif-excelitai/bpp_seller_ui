@@ -4,7 +4,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import '../../../../Model/imageis_list_model.dart';
+import '../../../../Model/homepage_caro_slider_model.dart';
 
 class HomepageCarousalSlider extends StatefulWidget {
   const HomepageCarousalSlider({super.key});
