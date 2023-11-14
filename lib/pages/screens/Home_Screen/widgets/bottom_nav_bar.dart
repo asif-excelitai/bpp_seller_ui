@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 Widget customHeightNavBar() {
   return Container(
-    height: 58.99997, // Set your desired height here
-    width: double.infinity, // Full width
+    height: 58.99997,
+    // width: double.infinity,
     decoration: BoxDecoration(
       color: Colors.transparent,
       boxShadow: [BoxShadow(color: Colors.transparent)],

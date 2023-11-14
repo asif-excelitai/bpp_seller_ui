@@ -32,8 +32,7 @@ class _HomepageCarousalSliderState extends State<HomepageCarousalSlider> {
           height: 124.h,
           child: CarouselSlider.builder(
             itemCount: homeSliderList.length,
-            itemBuilder:
-                (BuildContext context, int itemIndex, int pageviewIndex) {
+            itemBuilder: (BuildContext context, int itemIndex, int pageviewIndex) {
               return
                 // Image("${homeSliderList[itemIndex].sliderImage}");
                 Container(
@@ -42,7 +41,9 @@ class _HomepageCarousalSliderState extends State<HomepageCarousalSlider> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Image.asset("${homeSliderList[itemIndex].sliderImage}",fit: BoxFit.fill,)
+                    child:
+                    // Text("hello"),
+                    Image.asset("${homeSliderList[itemIndex].sliderImage}",fit: BoxFit.fill,)
                 );
             },
             options: CarouselOptions(
@@ -69,10 +70,10 @@ class _HomepageCarousalSliderState extends State<HomepageCarousalSlider> {
               dotsCount: homeSliderList.length,
               position: currentIndex,
               decorator: DotsDecorator(
-                  size:  Size(30.0.w, 2.0.h),
-                  activeSize: Size(30.0.w, 2.0.h),
+                  size:  Size(20.0.w, 2.0.h),
+                  activeSize: Size(20.0.w, 2.0.h),
                   color: const Color(0xff828282),
-                  activeColor: Colors.white,
+                  activeColor: Colors.red,
 
                   activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0))
               ),
