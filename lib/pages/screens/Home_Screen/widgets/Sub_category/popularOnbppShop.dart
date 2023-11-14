@@ -15,7 +15,8 @@ class PopularOnBppShop extends StatelessWidget {
       height: 161.h,
       width: 334.w,
       margin:EdgeInsets.only(top: 24.h,right: 2.w,),
-      color: Colors.teal,
+      // color: Colors.teal,
+      color: Color(0xFFF4F4F4),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

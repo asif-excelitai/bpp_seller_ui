@@ -54,6 +54,7 @@ flutter:
     - assets/fonts/
     - assets/images/homepahe_carosul/
     - assets/icon/popularitem/
+    - assets/icon/bottom_nav_bar/
 
   fonts:
     - family: Inter

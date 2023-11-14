@@ -23,13 +23,13 @@ class HotdealsFeathers extends StatelessWidget {
             Container(
               height: 20.h,
               margin: EdgeInsets.only(),
-              color: Colors.red,
+              // color: Colors.red,
               child: Row(
                 children: [
                   Container(
                     height: 17.h,
                     width: 66.w,
-                    margin: EdgeInsets.only(top: 3.h,left: 12.w),
+                    margin: EdgeInsets.only(top: 3.h,left: 13.w),
                     child: Text("Hot Deals",style: TextStyle(
                       color:Color(0xFF546678),
                       fontSize: 14.sp,
@@ -38,7 +38,7 @@ class HotdealsFeathers extends StatelessWidget {
                   ),
                   const TimerCountDown(),
                   Padding(
-                    padding: EdgeInsets.only(left:63.w,top: 5.h ),
+                    padding: EdgeInsets.only(top: 5.h ),
                     child: Container(
                       height: 15.h,
                       width: 60.w,

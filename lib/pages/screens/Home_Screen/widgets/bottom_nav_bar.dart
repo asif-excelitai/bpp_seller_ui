@@ -1,32 +1,38 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget customHeightNavBar() {
   return Container(
     height: 58.99997,
+    width: 360.w,
     // width: double.infinity,
     decoration: BoxDecoration(
-      color: Colors.transparent,
+      color: Colors.red,
       boxShadow: [BoxShadow(color: Colors.transparent)],
     ),
     child: BottomNavigationBar(
       // onTap: (){},
-      // elevation: 0,
-      // currentIndex: _selectedIndex,
-      backgroundColor: Colors.transparent,
       elevation: 0,
-      items: const <BottomNavigationBarItem>[
+      backgroundColor: Colors.transparent,
+      selectedItemColor: Color(0xffFF8800),
+      items:  <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Image.asset("assets/icon/bottom_nav_bar/home.png",height: 24.h,width: 24.w,),
           label: 'Home',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.search),
-          label: 'Search',
+          icon: Image.asset("assets/icon/bottom_nav_bar/profile.png",height: 24.h,width: 24.w,),
+          label: 'Profile',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.favorite),
-          label: 'Favorite',
+          icon: Image.asset("assets/icon/bottom_nav_bar/Orderlist.png",height: 24.h,width: 24.w,),
+          label: 'Order List',
+
+        ),
+        BottomNavigationBarItem(
+          icon: Image.asset("assets/icon/bottom_nav_bar/Cart.png",height: 24.h,width: 24.w,),
+          label: 'Cart',
 
         ),
       ],
