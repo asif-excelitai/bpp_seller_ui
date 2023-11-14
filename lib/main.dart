@@ -1,4 +1,7 @@
-import 'package:bpp_seller_ans/pages/screens/Home_Screen/homescreen.dart';
+import 'package:bpp_seller_ans/screens/Home_Screen/homescreen.dart';
+import 'package:bpp_seller_ans/screens/Order_list/order_list.dart';
+import 'package:bpp_seller_ans/screens/Profile_screen/profile_screen.dart';
+import 'package:bpp_seller_ans/screens/cart_screen/Add_to_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,9 +19,16 @@ class Myapp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_,child){
-        return const MaterialApp(
+        return  MaterialApp(
           debugShowCheckedModeBanner: false,
-          home:  Homepage(),
+          // home:  Homepage(),
+          initialRoute: '/',
+          routes: {
+            '/': (context)=> Homepage(),
+            '/second':(context)=>  Profile(),
+            '/third':(context)=>  OrderList(),
+            '/fourth':(context)=>  AddtoCart(),
+          },
         );
       },
 

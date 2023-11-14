@@ -1,6 +1,7 @@
-import 'package:bpp_seller_ans/pages/screens/Home_Screen/widgets/timer_countdown.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'timer_countdown.dart';
 
 class HotdealsFeathers extends StatelessWidget {
   const HotdealsFeathers({
