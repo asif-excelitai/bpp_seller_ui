@@ -1,6 +1,7 @@
 import 'package:bpp_seller_ans/pages/screens/Home_Screen/widgets/Sub_category/popularOnbppShop.dart';
 import 'package:bpp_seller_ans/pages/screens/Home_Screen/widgets/bottom_nav_bar.dart';
 import 'package:bpp_seller_ans/pages/screens/Home_Screen/widgets/customAppbar.dart';
+import 'package:bpp_seller_ans/pages/screens/Home_Screen/widgets/hot_deals_feather.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -43,48 +44,56 @@ class _HomepageState extends State<Homepage> {
                   Column(
                     children: [
                       PopularOnBppShop(),
-                      Container(
-                        // margin: EdgeInsets.only(top: 0.h),
-                        height: 383.h,
-                        width: 360.w,
-                        color: Colors.redAccent,
-                        child: Padding(
-                          padding:  EdgeInsets.only(top: 9.0.h),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                                    Container(
-                                      color: Colors.blue,
-                                      height: 20.h,
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            margin: EdgeInsets.only(top: 3.h,right: 57.w),
-                                            child: Text("Hot Deals",style: TextStyle(
-                                              color:Color(0xFF546678),
-                                              fontSize: 14.sp,
-                                              fontWeight: FontWeight.w500,
-                                            )),
-                                          ),
-                                          Container(
-                                            color: Colors.black12,
-                                            width: 90.w,
-                                            height: 20.h,
-
-                                          )
-                                        ],
-                                      ),
-                                    )
-                            ],
-                          ),
-                        ),
-                      )
+                      // Container(
+                      //   // margin: EdgeInsets.only(top: 0.h),
+                      //   height: 383.h,
+                      //   width: 360.w,
+                      //   // color: Color(0xFFFFFFFF),
+                      //   color: Colors.red,
+                      //   child: Padding(
+                      //     padding:  EdgeInsets.only(top: 9.0.h),
+                      //     child: Column(
+                      //       crossAxisAlignment: CrossAxisAlignment.start,
+                      //       children: [
+                      //               Container(
+                      //                 height: 20.h,
+                      //                 child: Row(
+                      //                   children: [
+                      //                     Container(
+                      //                       margin: EdgeInsets.only(top: 3.h),
+                      //                       child: Text("Hot Deals",style: TextStyle(
+                      //                         color:Color(0xFF546678),
+                      //                         fontSize: 14.sp,
+                      //                         fontWeight: FontWeight.w500,
+                      //                       )),
+                      //                     ),
+                      //                     const TimerCountDown(),
+                      //                     Padding(
+                      //                       padding: EdgeInsets.only(left:63.h,top: 5.h ),
+                      //                       child: Container(
+                      //                         height: 15.h,
+                      //                         width: 60.w,
+                      //                         child: Text("View more",style: TextStyle(
+                      //                           color: Color(0xFFFF8800),
+                      //                           fontWeight: FontWeight.w400,
+                      //                           fontSize: 12.sp
+                      //
+                      //                         ),),
+                      //                       ),
+                      //                     ),
+                      //                   ],
+                      //                 ),
+                      //               )
+                      //       ],
+                      //     ),
+                      //   ),
+                      // )
                     ],
                   )
                 ],
               ),
             ),
-
+           const HotdealsFeathers()
           ],
         ),
       ),
@@ -97,6 +106,10 @@ class _HomepageState extends State<Homepage> {
 
 
 }
+
+
+
+
 
 
 
