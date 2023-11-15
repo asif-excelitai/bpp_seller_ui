@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:bpp_seller_ans/screens/Home_Screen/widgets/Sub_category/popularOnbppShop.dart';
 import 'package:bpp_seller_ans/screens/Home_Screen/widgets/customAppbar.dart';
+import 'package:bpp_seller_ans/screens/Home_Screen/widgets/custom_Drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -37,7 +38,9 @@ class _HomepageState extends State<Homepage> {
       key: _scaffoldKey,
       backgroundColor:Color(0xFFF4F4F4),
       appBar: AppBar(
+        elevation: 0,
         toolbarHeight: 62.h,
+        backgroundColor: Color(0xFFFFFFFF),
         actions: [
            CustomAppbar(scaffoldKey: _scaffoldKey),
         ],
@@ -51,21 +54,16 @@ class _HomepageState extends State<Homepage> {
               child: Column(
                 children: [
                   HomepageCarousalSlider(),
-                  Column(
-                    children: [
-                      PopularOnBppShop(),
-                    ],
-                  )
+                  PopularOnBppShop()
                 ],
               ),
             ),
-           const HotdealsFeathers()
+           const HotdealsFeathers(),
+
           ],
         ),
       ),
-      drawer: Drawer(
-        backgroundColor: Colors.red,
-      ) ,
+      drawer: CustomDrawer(),
       bottomNavigationBar:
       // customHeightNavBar()
         ///
