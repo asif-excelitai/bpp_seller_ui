@@ -11,12 +11,14 @@ class OrderList extends StatefulWidget {
 class _OrderListState extends State<OrderList> {
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      width: 360.w,
-      height: 800.h,
-      color: Colors.lightBlueAccent,
-      child: Center(child: Text("This is OrderList Page")),
+    return  Scaffold(
+      body: Container(
+        width: 360.w,
+        height: 800.h,
+        color: Colors.lightBlueAccent,
+        child: Center(child: Text("This is OrderList Page")),
 
+      )
     );
   }
 }

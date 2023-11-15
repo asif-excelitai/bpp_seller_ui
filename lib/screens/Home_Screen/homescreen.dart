@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:bpp_seller_ans/screens/Home_Screen/widgets/Sub_category/popularOnbppShop.dart';
 import 'package:bpp_seller_ans/screens/Home_Screen/widgets/customAppbar.dart';
 import 'package:bpp_seller_ans/screens/Home_Screen/widgets/custom_Drawer.dart';
@@ -6,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'widgets/carousal_slider.dart';
-import 'widgets/hot_deals_feather.dart';
+import 'widgets/Sub_category/hot_deals_feather.dart';
 
 
 class Homepage extends StatefulWidget {
@@ -51,14 +50,30 @@ class _HomepageState extends State<Homepage> {
           children: [
             Padding(
               padding: EdgeInsets.only( top: 16.h,right: 12.w,left: 12.w),
-              child: Column(
+              child:const  Column(
                 children: [
                   HomepageCarousalSlider(),
                   PopularOnBppShop()
                 ],
               ),
             ),
-           const HotdealsFeathers(),
+              HotdealsFeathers(),
+            Container(
+              margin: EdgeInsets.only(top: 30.h),
+              height: 122.h,
+              child:Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    margin: EdgeInsets.only(left: 12.w,top: 18.h,bottom: 24.h),
+                    // height: 80.h,width: 220.w,
+                    child: Image.asset("assets/images/discount_sale/discount sale 1.png",height: 80.h,width: 220.w,),
+                  )
+                ],
+              ) ,
+            )
 
           ],
         ),
@@ -77,7 +92,7 @@ class _HomepageState extends State<Homepage> {
         ),
         child: BottomNavigationBar(
           onTap: (index) {
-            log("=========tapped on  $index");
+            // log("=========tapped on  $index");
             setState(() {
               _currentIndex= index;
             });
