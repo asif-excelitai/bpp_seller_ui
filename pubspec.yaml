@@ -58,7 +58,7 @@ flutter:
     - assets/icon/popularitem/
     - assets/icon/bottom_nav_bar/
     - assets/images/product_type/
-    - assets/images/discount_sale/discount sale 1.png
+    - assets/images/discount_sale/
 
   fonts:
     - family: Inter

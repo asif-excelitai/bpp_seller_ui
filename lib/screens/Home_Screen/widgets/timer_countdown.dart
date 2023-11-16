@@ -11,9 +11,9 @@ class TimerCountDown extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // color: Colors.black12,
-      margin: EdgeInsets.only(left: 57.w,right: 63.w),
-      width: 90.w,
-      height: 20.h,
+      // margin: EdgeInsets.only(left: 50.5.w,right: 61.5.w),
+      width: 99.w,
+      height: 30.h,
       child: SlideCountdownSeparated(
         separatorStyle:TextStyle(
           color:Color(0xFFFF8800),
@@ -27,9 +27,10 @@ class TimerCountDown extends StatelessWidget {
             color: Colors.orangeAccent
         ),
         textStyle: TextStyle(
-          fontSize: 10.sp,
+          fontSize: 12.sp,
           fontWeight: FontWeight.w700,
           color: Color(0xffffffff),
+          // color: Colors.blue,
         ),
       ),
 

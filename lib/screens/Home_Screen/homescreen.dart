@@ -1,11 +1,18 @@
+import 'package:bpp_seller_ans/screens/Home_Screen/widgets/Sub_category/discount_banner.dart';
+import 'package:bpp_seller_ans/screens/Home_Screen/widgets/Sub_category/discount_banner_large.dart';
 import 'package:bpp_seller_ans/screens/Home_Screen/widgets/Sub_category/popularOnbppShop.dart';
+import 'package:bpp_seller_ans/screens/Home_Screen/widgets/add_to_cart_button.dart';
+import 'package:bpp_seller_ans/screens/Home_Screen/widgets/best_selling_full_page.dart';
 import 'package:bpp_seller_ans/screens/Home_Screen/widgets/customAppbar.dart';
 import 'package:bpp_seller_ans/screens/Home_Screen/widgets/custom_Drawer.dart';
+import 'package:bpp_seller_ans/screens/Home_Screen/widgets/tab_view_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../Model/hot_deals_product.dart';
 import 'widgets/carousal_slider.dart';
-import 'widgets/Sub_category/hot_deals_feather.dart';
+import 'widgets/hot_deals/hot_deals_featcher.dart';
 
 
 class Homepage extends StatefulWidget {
@@ -57,23 +64,239 @@ class _HomepageState extends State<Homepage> {
                 ],
               ),
             ),
-              HotdealsFeathers(),
-            Container(
-              margin: EdgeInsets.only(top: 30.h),
-              height: 122.h,
-              child:Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
+           const   HotdealsFeathers(),
+          const  DiscountBanner(),
+           const TabPages(),
+          const DiscountBannerLarge(),
+           const BestSellingFullpage(),
+            const DiscountBannerLarge(),
+      SizedBox(
+          child: Padding(
+            padding:  EdgeInsets.only(top: 12.h),
+            child: Column(
+              children: [
+                Padding(
+                  padding:EdgeInsets.only(left: 12.w,right: 289.w),
+                  child: Text("All Yours",style: TextStyle(fontSize: 14.sp,fontWeight: FontWeight.w500,color:const Color(0xFF546678)),),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 8.h,left: 12.w),
+                  height: 322.h,
+                  color: const Color(0xFFFFFFFF),
+                  child:GridView.builder(
+                    scrollDirection: Axis.horizontal,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 1,
+                        // crossAxisSpacing:12.w,
+                        mainAxisSpacing:12.w,
+                        childAspectRatio:322/162
                     ),
-                    margin: EdgeInsets.only(left: 12.w,top: 18.h,bottom: 24.h),
-                    // height: 80.h,width: 220.w,
-                    child: Image.asset("assets/images/discount_sale/discount sale 1.png",height: 80.h,width: 220.w,),
-                  )
-                ],
-              ) ,
-            )
+                    itemCount: hotDealsList.length,
+                    itemBuilder: (BuildContext context,int index){
+                      return Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10),bottomRight:Radius.circular(10)), // adds rounded corners
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding:  EdgeInsets.only(top:4.h ,left: 4.w,right: 4.w),
+                              child: Image.asset('${hotDealsList[index].productImageurl}',height:154.h,width: 154.w),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top:6.h,right: 7.w,left: 1.w),
+                              child: Text("${hotDealsList[index].productName}",overflow: TextOverflow.fade,style: TextStyle(
+                                  color: const Color(0xFF333333),
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 12.sp
+                              ),),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 4.h,left: 50.w,right: 53.w),
+                              child: Text("${hotDealsList[index].unit}" ":""Pair",style:TextStyle(
+                                color: const Color(0xFF333333),
+                                fontSize: 14.sp,
+                                fontWeight: FontWeight.w600,
+                              ) , ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(top: 4.81.h,left:41.w,right:54.w  ),
+                              //  width:67.w,
+                              // height: 17.h,
+                              child: RichText(text:TextSpan(
+                                  children: <TextSpan>[
+
+                                    TextSpan(
+                                        text: '${hotDealsList[index].productDiscountprice}' '৳ ',style: TextStyle(
+                                      fontSize: 14.sp,
+                                      fontWeight: FontWeight.w700,
+                                      color: const Color(0xFF333333),
+                                    )
+                                    ),
+
+                                    TextSpan(text: '${hotDealsList[index].productPrice}' '৳',style: TextStyle(
+                                      fontSize: 12.sp,
+                                      fontWeight: FontWeight.w400,
+                                      color: const Color(0xFFFF8800),
+                                      // decorationThickness:
+                                      decoration: TextDecoration.lineThrough,
+                                    ),)
+
+
+                                  ]
+                              ),
+
+
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 1.h,left: 30.w),
+                              child: Row(
+                                children: [
+                                  Container(
+
+                                    // margin: EdgeInsets.only(top: 10.h,left: 30.w),
+                                    height: 12.h,width:76.w,
+                                    child: RatingBar.builder(
+                                      initialRating: hotDealsList[index].productRating as double,
+                                      minRating: 1,
+                                      tapOnlyMode: true,
+                                      direction: Axis.horizontal,
+                                      allowHalfRating: true,
+                                      itemCount: 5,
+                                      itemSize: 15.w,
+                                      itemPadding: EdgeInsets.symmetric(horizontal: .1),
+                                      itemBuilder: (context,_)=>Icon(Icons.star,color:Color(0xffFDC040) ,),
+
+                                      onRatingUpdate: (rating){},
+
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(left: 2.w,top: 2.h),
+                                    height: 15.h,
+                                    child: Text("(""${hotDealsList[index].ratingCount}"")",style: TextStyle(
+                                      color: Color(0xFF333333),
+                                      fontSize: 12.sp,
+                                      fontWeight: FontWeight.w400,
+                                    ),),
+                                  )
+                                ],
+                              ),
+                            ),
+                            const AddToCartButton()
+
+                          ],
+                        ),
+                      );
+                    })
+        // child: ListView.builder(
+                  //
+                  //   itemCount: hotDealsList.length,
+                  //   itemBuilder: (BuildContext context, int index) {
+                  //     return Container(
+                  //       margin: EdgeInsets.only(top: 8.h, left: 12.w),
+                  //       height: 322.h,
+                  //       color: const Color(0xFFFFFFFF),
+                  //       child: Card(
+                  //         shape: RoundedRectangleBorder(
+                  //           borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
+                  //         ),
+                  //         child: Column(
+                  //           crossAxisAlignment: CrossAxisAlignment.start,
+                  //           children: [
+                  //             Padding(
+                  //               padding: EdgeInsets.only(top: 4.h, left: 4.w, right: 4.w),
+                  //               child: Image.asset('${hotDealsList[index].productImageurl}', height: 154.h, width: 154.w),
+                  //             ),
+                  //             Padding(
+                  //               padding: EdgeInsets.only(top: 6.h, right: 7.w, left: 1.w),
+                  //               child: Text("${hotDealsList[index].productName}", overflow: TextOverflow.fade, style: TextStyle(
+                  //                 color: const Color(0xFF333333),
+                  //                 fontWeight: FontWeight.w400,
+                  //                 fontSize: 12.sp,
+                  //               )),
+                  //             ),
+                  //             Padding(
+                  //               padding: EdgeInsets.only(top: 6.h, left: 52.w, right: 58.w),
+                  //               child: Text("${hotDealsList[index].unit}" " : " "Pair", style: TextStyle(
+                  //                 color: const Color(0xFF333333),
+                  //                 fontSize: 14.sp,
+                  //                 fontWeight: FontWeight.w600,
+                  //               )),
+                  //             ),
+                  //             Container(
+                  //               margin: EdgeInsets.only(top: 8.h, left: 41.w, right: 54.w),
+                  //               child: RichText(
+                  //                 text: TextSpan(
+                  //                   children: <TextSpan>[
+                  //                     TextSpan(
+                  //                       text: '${hotDealsList[index].productDiscountprice}' '৳ ',
+                  //                       style: TextStyle(
+                  //                         fontSize: 14.sp,
+                  //                         fontWeight: FontWeight.w700,
+                  //                         color: const Color(0xFF333333),
+                  //                       ),
+                  //                     ),
+                  //                     TextSpan(
+                  //                       text: '${hotDealsList[index].productPrice}' '৳',
+                  //                       style: TextStyle(
+                  //                         fontSize: 12.sp,
+                  //                         fontWeight: FontWeight.w400,
+                  //                         color: const Color(0xFFFF8800),
+                  //                         decoration: TextDecoration.lineThrough,
+                  //                       ),
+                  //                     ),
+                  //                   ],
+                  //                 ),
+                  //               ),
+                  //             ),
+                  //             Padding(
+                  //               padding: EdgeInsets.only(top: 1.h, left: 30.w),
+                  //               child: Row(
+                  //                 children: [
+                  //                   Container(
+                  //                     height: 12.h,
+                  //                     width: 76.w,
+                  //                     child: RatingBar.builder(
+                  //                       initialRating: hotDealsList[index].productRating as double,
+                  //                       minRating: 1,
+                  //                       tapOnlyMode: true,
+                  //                       direction: Axis.horizontal,
+                  //                       allowHalfRating: true,
+                  //                       itemCount: 5,
+                  //                       itemSize: 15.w,
+                  //                       itemPadding: EdgeInsets.symmetric(horizontal: .1),
+                  //                       itemBuilder: (context, _) => Icon(Icons.star, color: Color(0xffFDC040)),
+                  //                       onRatingUpdate: (rating) {},
+                  //                     ),
+                  //                   ),
+                  //                   Container(
+                  //                     margin: EdgeInsets.only(left: 2.w, top: 5.h),
+                  //                     height: 15.h,
+                  //                     child: Text("(${hotDealsList[index].ratingCount})", style: TextStyle(
+                  //                       color: Color(0xFF333333),
+                  //                       fontSize: 12.sp,
+                  //                       fontWeight: FontWeight.w400,
+                  //                     )),
+                  //                   ),
+                  //                 ],
+                  //               ),
+                  //             ),
+                  //             const AddToCartButton(),
+                  //           ],
+                  //         ),
+                  //       ),
+                  //     );
+                  //   },
+                  // )
+
+                )
+              ],
+            ),
+          )
+      )
 
           ],
         ),
@@ -131,6 +354,14 @@ class _HomepageState extends State<Homepage> {
 
 
 }
+
+
+
+
+
+
+
+
 
 
 

@@ -63,7 +63,7 @@ class CustomAppbar extends StatelessWidget {
                   padding: EdgeInsets.only(left: .3.w),
                   child: Container(
                     // margin: EdgeInsets.only(right: 0.w),
-                    width:28.w,
+                    width:27.8.w,
                     height: 34.h,
                     // color: Color(0xFFFF8800),
                     decoration: BoxDecoration(
@@ -74,7 +74,7 @@ class CustomAppbar extends StatelessWidget {
                       )
                     ),
                     child: Padding(
-                      padding:  EdgeInsets.only(top: 8.h,bottom: 8.h,right: 5.w),
+                      padding:  EdgeInsets.only(top: 8.h,bottom: 8.h,right: 1.w),
                       child: Image.asset("assets/icon/appbar/SearchIcon.png",height: 18.h,width: 18.w,color:const Color(0xffFFFFFF),),
                     ),
                   ),
@@ -83,7 +83,7 @@ class CustomAppbar extends StatelessWidget {
             ),
           ),
           Padding(
-            padding:  EdgeInsets.only(top: 4.h,left: 26.w,bottom: 4.h),
+            padding:  EdgeInsets.only(top: 4.h,left: 25.w,bottom: 4.h),
             child: Row(
               children: [
                 Container(
