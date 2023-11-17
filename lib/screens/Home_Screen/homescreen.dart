@@ -83,7 +83,7 @@ class _HomepageState extends State<Homepage> {
                 // height: 322.h, //creates a problem of height ,not use it
                 color: const Color(0xFFFFFFFF),
                 child:GridView.builder(
-                    // scrollDirection: Axis.vertical,   
+                    // scrollDirection: Axis.vertical,
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
                   padding: EdgeInsets.zero,

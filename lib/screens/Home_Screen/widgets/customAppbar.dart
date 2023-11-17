@@ -1,5 +1,7 @@
+import 'package:bpp_seller_ans/screens/Home_Screen/pop_up/popuplists.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:popover/popover.dart';
 class CustomAppbar extends StatelessWidget {
   const CustomAppbar({
     super.key,
@@ -91,10 +93,19 @@ class CustomAppbar extends StatelessWidget {
                   child: InkWell(
                     child: Image.asset("assets/icon/appbar/agent.png",width: 27.w,height: 26.h,),
                     onTap: (){
+                      showPopover(context: context, bodyBuilder:(context)=>const ListItems2(),
+                        transitionDuration: const Duration(milliseconds: 150),
+                        direction: PopoverDirection.bottom,
+                        width: 146.w,
+                        height: 79.h,
+                        arrowHeight: 10.h,
+                        arrowWidth: 20.w,
+                        arrowDxOffset:100.w,
+                        arrowDyOffset: 1.h,
+
+                      );
                     },
                   )
-
-                  // Image.asset("assets/icon/user.png",) assets/icon/agent.png
 
                   ,),
                 Container(
@@ -102,6 +113,20 @@ class CustomAppbar extends StatelessWidget {
                     child: InkWell(
                       child: Image.asset("assets/icon/appbar/user.png",width: 24.w,height: 24.h,),
                       onTap: (){
+                        showPopover(context: context, bodyBuilder:(context)=> ListItems1(),
+                          transitionDuration: const Duration(milliseconds: 150),
+                          direction: PopoverDirection.bottom,
+                          width: 98.w,
+                          height: 79.h,
+                          arrowHeight: 10.h,
+                          arrowWidth: 20.w,
+                          radius: 10.h,
+                          arrowDxOffset:145.w,
+                          arrowDyOffset: 1.h,
+
+
+
+                        );
                       },
                     )
                 ),
