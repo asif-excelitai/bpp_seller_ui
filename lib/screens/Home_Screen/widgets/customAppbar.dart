@@ -102,6 +102,8 @@ class CustomAppbar extends StatelessWidget {
                         arrowWidth: 20.w,
                         arrowDxOffset:100.w,
                         arrowDyOffset: 1.h,
+                        contentDyOffset: 0.h,
+
 
                       );
                     },
@@ -123,9 +125,7 @@ class CustomAppbar extends StatelessWidget {
                           radius: 10.h,
                           arrowDxOffset:145.w,
                           arrowDyOffset: 1.h,
-
-
-
+                          contentDyOffset: 0.h,
                         );
                       },
                     )

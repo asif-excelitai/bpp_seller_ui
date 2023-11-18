@@ -276,10 +276,10 @@ packages:
     dependency: "direct main"
     description:
       name: slide_countdown
-      sha256: "2701b980f7a8f5554cdd52264ddc64f1f17e2e56eca2501dc5d27bd8e8655c57"
+      sha256: "741e6099041bc8a0ce813709e7888dbb6f4950b920362231c4f275b69d81cc6b"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.1"
+    version: "1.2.1"
   source_span:
     dependency: transitive
     description:
@@ -308,10 +308,10 @@ packages:
     dependency: transitive
     description:
       name: stream_duration
-      sha256: "766e19d507bc1ae64beda01ef075ba40e36e0380138c6b6cf28d4742a7bc4a38"
+      sha256: d4e833a8db38faec87325ca784079d1e90ba66f78c365ca96f353a59b26bd62e
       url: "https://pub.dev"
     source: hosted
-    version: "4.2.1"
+    version: "4.2.2"
   string_scanner:
     dependency: transitive
     description:
@@ -364,10 +364,10 @@ packages:
     dependency: transitive
     description:
       name: win32
-      sha256: "350a11abd2d1d97e0cc7a28a81b781c08002aa2864d9e3f192ca0ffa18b06ed3"
+      sha256: "7c99c0e1e2fa190b48d25c81ca5e42036d5cac81430ef249027d97b0935c553f"
       url: "https://pub.dev"
     source: hosted
-    version: "5.0.9"
+    version: "5.1.0"
   xdg_directories:
     dependency: transitive
     description:

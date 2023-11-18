@@ -205,10 +205,7 @@ class _HomepageState extends State<Homepage> {
         ),
       ),
       drawer: CustomDrawer(),
-      bottomNavigationBar:
-      // customHeightNavBar()
-        ///
-      Container(
+      bottomNavigationBar: Container(
         height: 58.99997,
         width: 360.w,
         // width: double.infinity,

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:bpp_seller_ans/screens/Home_Screen/homescreen.dart';
 import 'package:bpp_seller_ans/screens/Order_list/order_list.dart';
 import 'package:bpp_seller_ans/screens/Profile_screen/profile_screen.dart';
@@ -14,6 +16,7 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log( MediaQuery.of(context).size.width);
     return ScreenUtilInit(
       designSize: const Size(360 ,800),
       minTextAdapt: true,
