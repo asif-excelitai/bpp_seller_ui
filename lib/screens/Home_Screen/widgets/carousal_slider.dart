@@ -27,7 +27,7 @@ class _HomepageCarousalSliderState extends State<HomepageCarousalSlider> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
+        SizedBox(
           width: 336.w,
           height: 124.h,
           child: CarouselSlider.builder(
@@ -53,7 +53,7 @@ class _HomepageCarousalSliderState extends State<HomepageCarousalSlider> {
                 initialPage: 0,
                 aspectRatio: 1,
                 enlargeCenterPage: true,
-                autoPlayAnimationDuration: Duration(milliseconds: 500),
+                autoPlayAnimationDuration: const Duration(milliseconds: 500),
                 viewportFraction: 2),
           ),
 
@@ -63,7 +63,7 @@ class _HomepageCarousalSliderState extends State<HomepageCarousalSlider> {
           left: 201.0.w,
           right: 12.w,
           top: 102.h,
-          child: Container(
+          child: SizedBox(
             height: 10.h,
             width: 106.w,
             child: DotsIndicator(

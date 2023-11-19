@@ -17,9 +17,9 @@ class DiscountBanner extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
             ),
-            // margin: EdgeInsets.only(left: 12.w,bottom: 24.h),
+            margin: EdgeInsets.only(left: 12.w),
             // height: 80.h,width: 220.w,
-            child: Image.asset("assets/images/discount_sale/discount sale 1.png",height: 80.h,width: 220.w,),
+            child: Image.asset("assets/images/discount_sale/discount sale 1.png",height: 80.h,width: 220.w,fit: BoxFit.fill,),
           ),
           Container(
             margin: EdgeInsets.only(top:18.h,left: 12.w ,bottom: 24.h),

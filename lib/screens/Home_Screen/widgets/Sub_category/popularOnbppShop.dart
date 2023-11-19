@@ -16,20 +16,20 @@ class PopularOnBppShop extends StatelessWidget {
       width: 334.w,
       margin:EdgeInsets.only(top: 24.h,right: 2.w,),
       // color: Colors.teal,
-      color: Color(0xFFF4F4F4),
+      color: const Color(0xFFF4F4F4),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
+          SizedBox(
               height: 17.h,
               child: Text("Popular on BPP Shop",style: bppTextStyle.dealsCategory,)),
           Container(
             margin:EdgeInsets.only(top: 8.h,left: 2.w),
               height: 136.h,
               width: 332.w,
-              color: Color(0xFFF4F4F4),
-              child: Container(
+              color: const Color(0xFFF4F4F4),
+              child: SizedBox(
                 height: 136.h,
                 child:GridView.builder(
                   scrollDirection: Axis.horizontal,
@@ -46,7 +46,7 @@ class PopularOnBppShop extends StatelessWidget {
                         padding: EdgeInsets.only(top: 4.h,left: 11.w,right: 11.w),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6),
-                          color: Color(0xFFF4F4F4),
+                          color: const Color(0xFFF4F4F4),
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

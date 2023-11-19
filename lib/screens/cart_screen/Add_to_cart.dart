@@ -15,7 +15,7 @@ class _AddtoCartState extends State<AddtoCart> {
         width: 360.w,
         height: 780.h,
         color:Colors.amberAccent,
-        child: Center(child: Text("This is Cart Screen")),
+        child: const Center(child: Text("This is Cart Screen")),
     );
   }
 }

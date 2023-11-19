@@ -29,14 +29,14 @@ class _BestSellingFullpageState extends State<BestSellingFullpage> {
                   Text("Best Selling",style: TextStyle(
                       fontWeight: FontWeight.w500,
                     fontSize: 14.sp,
-                    color: Color(0xFF546678),
+                    color: const Color(0xFF546678),
                   ),),
                   Padding(
                     padding: EdgeInsets.only(left:197.w,top: 2.h),
                     child: Text("View more",style: TextStyle(
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w400,
-                      color: Color(0xFFFF8800),
+                      color: const Color(0xFFFF8800),
                     ),),
                   ),
                 ],

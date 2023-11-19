@@ -16,33 +16,29 @@ class TabPages extends StatefulWidget {
 class _TabPagesState extends State<TabPages> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    TabController _tabController=TabController(length: 3, vsync: this);
-    return Container(
-      // height: 414.h,
-      // color: Colors.teal,
+    TabController tabController=TabController(length: 3, vsync: this);
+    return SizedBox(
       width: 360.w,
-      // color: Colors.amberAccent,
       child: Column(
         children: [
           Container(
             // color: Colors.white10,
             height: 40.h,
-                 decoration: BoxDecoration(
+                 decoration: const BoxDecoration(
                     color: Colors.white10,
-                   // borderRadius: BorderRadius.vertical(bottom: Radius.circular(10.0)),
                    borderRadius: BorderRadius.only(topRight: Radius.circular(10),topLeft: Radius.circular(10)),
                  ),
                  child: TabBar(
-                   labelColor: Color(0xFFA6A6A6),
+                   labelColor: const Color(0xFFA6A6A6),
                      indicatorColor: Colors.orangeAccent,
                      automaticIndicatorColorAdjustment: true,
                      indicatorSize: TabBarIndicatorSize.tab,
                      labelStyle: TextStyle(
-                       color: Color(0xFFA6A6A6),
+                       color: const Color(0xFFA6A6A6),
                        fontSize: 14.sp,
                        fontWeight: FontWeight.w500
                      ),
-                     indicator: BoxDecoration(
+                     indicator: const BoxDecoration(
                        color: Color(0xFFFF8800),
                        borderRadius: BorderRadius.only(
                          topLeft: Radius.circular(10),
@@ -50,8 +46,8 @@ class _TabPagesState extends State<TabPages> with TickerProviderStateMixin {
                        ),
 
                      ),
-                     controller: _tabController,
-                     tabs:[
+                     controller: tabController,
+                     tabs:const [
                    Tab(text: 'Best Selling',),
                    Tab(text: 'New Arrival',),
                    Tab(text: 'Discount Products',),
@@ -66,8 +62,8 @@ class _TabPagesState extends State<TabPages> with TickerProviderStateMixin {
                borderRadius: BorderRadius.circular(10)
              ),
               child: TabBarView(
-                  physics: NeverScrollableScrollPhysics(),
-                  controller: _tabController,
+                  physics: const NeverScrollableScrollPhysics(),
+                  controller: tabController,
                   children:const [
                     BestSelling(),
                     Newarrival(),

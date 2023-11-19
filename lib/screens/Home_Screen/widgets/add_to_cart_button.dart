@@ -14,7 +14,7 @@ class AddToCartButton extends StatelessWidget {
       margin: EdgeInsets.only(top: 9.5.h),
       height:48.h,
       width: 162.w,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(10),
           bottomRight: Radius.circular(10),
@@ -26,7 +26,7 @@ class AddToCartButton extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(6),
-            color: Color(0xFFFF8800),
+            color: const Color(0xFFFF8800),
           ),
           margin: EdgeInsets.only(top:8.h,bottom: 8.h ,left: 13.w,right: 13.w),
           height: 32.h,
@@ -42,7 +42,7 @@ class AddToCartButton extends StatelessWidget {
                 child: Text("Add to Cart",style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 14.sp,
-                    color:Color(0xFFFFFFFF)
+                    color:const Color(0xFFFFFFFF)
                 ),),
               )
             ],

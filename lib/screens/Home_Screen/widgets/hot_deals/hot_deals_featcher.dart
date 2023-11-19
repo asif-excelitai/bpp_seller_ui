@@ -21,7 +21,7 @@ class HotdealsFeathers extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               height: 20.h,
               // margin: EdgeInsets.only(),
               // color: Colors.red,

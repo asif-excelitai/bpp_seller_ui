@@ -16,7 +16,7 @@ class _OrderListState extends State<OrderList> {
         width: 360.w,
         height: 800.h,
         color: Colors.lightBlueAccent,
-        child: Center(child: Text("This is OrderList Page")),
+        child: const Center(child: Text("This is OrderList Page")),
 
       )
     );

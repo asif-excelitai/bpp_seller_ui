@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,7 +16,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
       child: Container(
         width: 258.w,
         height: 927.h,
-        color: Color(0xffffffff),
+        color: const Color(0xffffffff),
         child: ListView(
           padding: EdgeInsets.symmetric(vertical: 8.h),
           children: [
@@ -28,15 +27,15 @@ class _CustomDrawerState extends State<CustomDrawer> {
             Container(
               height: 38.h,
               width: 258.w,
-              color: Color(0xfffFF4e6),
+              color: const Color(0xfffFF4e6),
              padding: EdgeInsets.only(left: 16.w,top: 8.h,bottom: 0.h),
-              child: Text("Category",style: TextStyle(color: Color(0xffFF8800),fontWeight: FontWeight.w600,fontSize:18.sp),),
+              child: Text("Category",style: TextStyle(color: const Color(0xffFF8800),fontWeight: FontWeight.w600,fontSize:18.sp),),
             ),
            ExpansionTile(
                title: Text("Grocery (Only Dhaka city)",style: TextStyle(
                  fontSize: 14.sp,
                  fontWeight: FontWeight.w400,
-                 color: Color(0xff546678),
+                 color: const Color(0xff546678),
                ),
                ),
             leading: Image.asset("assets/icon/popularitem/Vegetables.png",width: 25.w,),
@@ -47,14 +46,14 @@ class _CustomDrawerState extends State<CustomDrawer> {
                    title: Text("All Grocery",style: TextStyle(
                    fontSize: 14.sp,
                    fontWeight: FontWeight.w400,
-                   color: Color(0xff546678),),
+                   color: const Color(0xff546678),),
                  ),
                    children: [
                      ExpansionTile(
                        title: Text("Meat & Fish",style: TextStyle(
                          fontSize: 14.sp,
                          fontWeight: FontWeight.w400,
-                         color: Color(0xff546678),),
+                         color: const Color(0xff546678),),
                        ),
 
                      ),
@@ -62,7 +61,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                        title: Text("Meat & Fish",style: TextStyle(
                          fontSize: 14.sp,
                          fontWeight: FontWeight.w400,
-                         color: Color(0xff546678),),
+                         color: const Color(0xff546678),),
                        ),
 
                      ),
@@ -70,7 +69,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                        title: Text("Bread & Bakery",style: TextStyle(
                          fontSize: 14.sp,
                          fontWeight: FontWeight.w400,
-                         color: Color(0xff546678),),
+                         color: const Color(0xff546678),),
                        ),
 
                      ),
@@ -78,7 +77,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                        title: Text("Beverages",style: TextStyle(
                          fontSize: 14.sp,
                          fontWeight: FontWeight.w400,
-                         color: Color(0xff546678),),
+                         color: const Color(0xff546678),),
                        ),
 
                      ),
@@ -86,7 +85,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                        title: Text("Dairy & Eggs",style: TextStyle(
                          fontSize: 14.sp,
                          fontWeight: FontWeight.w400,
-                         color: Color(0xff546678),),
+                         color: const Color(0xff546678),),
                        ),
 
                      ),
@@ -94,7 +93,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                        title: Text("Fruits & Vegetables",style: TextStyle(
                          fontSize: 14.sp,
                          fontWeight: FontWeight.w400,
-                         color: Color(0xff546678),),
+                         color: const Color(0xff546678),),
                        ),
 
                      ),
@@ -102,7 +101,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                        title: Text("Candy & Chocolate",style: TextStyle(
                          fontSize: 14.sp,
                          fontWeight: FontWeight.w400,
-                         color: Color(0xff546678),),
+                         color: const Color(0xff546678),),
                        ),
 
                      ),
@@ -110,7 +109,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                        title: Text("Oil & Spices",style: TextStyle(
                          fontSize: 14.sp,
                          fontWeight: FontWeight.w400,
-                         color: Color(0xff546678),),
+                         color: const Color(0xff546678),),
                        ),
 
                      ),
@@ -118,7 +117,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                        title: Text("Home & Cleaning",style: TextStyle(
                          fontSize: 14.sp,
                          fontWeight: FontWeight.w400,
-                         color: Color(0xff546678),),
+                         color: const Color(0xff546678),),
                        ),
 
                      ),
@@ -132,11 +131,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
                title: Text("Islamic",style: TextStyle(
                  fontSize: 14.sp,
                  fontWeight: FontWeight.w400,
-                 color: Color(0xff546678),
+                 color: const Color(0xff546678),
                ),
                ),
             leading: Image.asset("assets/icon/category/islamic.png",width: 25.w,),
-             children: [
+             children: const [
                // Padding(
                //   padding: EdgeInsets.only(top: 0.h,left: 55.w,bottom: 5.h),
                //   child: ExpansionTile(
@@ -228,11 +227,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
                title: Text("Fashion",style: TextStyle(
                  fontSize: 14.sp,
                  fontWeight: FontWeight.w400,
-                 color: Color(0xff546678),
+                 color: const Color(0xff546678),
                ),
                ),
             leading: Image.asset("assets/icon/category/fashion.png",width: 25.w,),
-             children: [
+             children: const [
              ],
 
            ),
@@ -240,11 +239,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: Text("Baby Care",style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff546678),
+                color: const Color(0xff546678),
               ),
               ),
               leading: Image.asset("assets/icon/category/baby care.png",width: 25.w,),
-              children: [
+              children: const [
               ],
 
             ),
@@ -252,11 +251,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: Text("Cosmetics",style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff546678),
+                color: const Color(0xff546678),
               ),
               ),
               leading: Image.asset("assets/icon/category/cosmetics.png",width: 25.w,),
-              children: [
+              children: const [
               ],
 
             ),
@@ -265,11 +264,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: Text("Personal Care",style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff546678),
+                color: const Color(0xff546678),
               ),
               ),
               leading: Image.asset("assets/icon/category/personal care.png",width: 25.w,),
-              children: [
+              children: const [
               ],
 
             ),
@@ -277,11 +276,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: Text("Pharmacy",style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff546678),
+                color: const Color(0xff546678),
               ),
               ),
               leading: Image.asset("assets/icon/category/pharmacy.png",width: 25.w,),
-              children: [
+              children: const [
               ],
 
             ),
@@ -289,11 +288,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: Text("Electronics",style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff546678),
+                color: const Color(0xff546678),
               ),
               ),
               leading: Image.asset("assets/icon/category/electronics.png",width: 25.w,),
-              children: [
+              children: const [
               ],
 
             ),
@@ -301,11 +300,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: Text("Eye Care",style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff546678),
+                color: const Color(0xff546678),
               ),
               ),
               leading: Image.asset("assets/icon/category/eye care.png",width: 25.w,),
-              children: [
+              children: const [
               ],
 
             ),
@@ -313,11 +312,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: Text("Shoe",style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff546678),
+                color: const Color(0xff546678),
               ),
               ),
               leading: Image.asset("assets/icon/category/shoe.png",width: 25.w,),
-              children: [
+              children: const [
               ],
 
             ),
@@ -325,11 +324,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: Text("Furniture",style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff546678),
+                color: const Color(0xff546678),
               ),
               ),
               leading: Image.asset("assets/icon/category/furniture.png",width: 25.w,),
-              children: [
+              children: const [
               ],
 
             ),
@@ -337,11 +336,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: Text("Stationery & Office",style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff546678),
+                color: const Color(0xff546678),
               ),
               ),
               leading: Image.asset("assets/icon/category/stationary and office.png",width: 25.w,),
-              children: [
+              children: const [
               ],
 
             ),
@@ -349,11 +348,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: Text("Home Appliance & Decorate",style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff546678),
+                color: const Color(0xff546678),
               ),
               ),
               leading: Image.asset("assets/icon/category/home appliance and decorate.png",width: 25.w,),
-              children: [
+              children: const [
               ],
 
             ),
@@ -361,11 +360,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: Text("Hardware, Cables & Sanitary",style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff546678),
+                color: const Color(0xff546678),
               ),
               ),
               leading: Image.asset("assets/icon/category/hardware cables sanitary.png",width: 25.w,),
-              children: [
+              children: const [
               ],
 
             ),
@@ -373,11 +372,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: Text("Vehicle",style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff546678),
+                color: const Color(0xff546678),
               ),
               ),
               leading: Image.asset("assets/icon/category/vehicles.png",width: 25.w,),
-              children: [
+              children: const [
               ],
 
             ),

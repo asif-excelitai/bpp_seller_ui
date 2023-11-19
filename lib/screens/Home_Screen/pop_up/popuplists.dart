@@ -10,7 +10,7 @@ class ListItems1 extends StatelessWidget {
     return Container(
       height: 20.h,
       width: 20.h,
-      color: Color(0xffffffff),
+      color: const Color(0xffffffff),
       margin: EdgeInsets.only(top: 21.h,right: 30.w),
       child: Column(
         children: [
@@ -52,7 +52,7 @@ class _ListItems2State extends State<ListItems2> {
     return  Container(
       height: 65.h,
       width: 146.w,
-      color: Color(0xffffffff),
+      color: const Color(0xffffffff),
       margin: EdgeInsets.only(top: 21.h,right: 30.w),
       child: Column(
         children: [

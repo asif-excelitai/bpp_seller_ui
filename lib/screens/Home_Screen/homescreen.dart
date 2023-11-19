@@ -26,7 +26,7 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   int _currentIndex = 0;
 
   // final  List<Widget> _pages =[
@@ -37,16 +37,16 @@ class _HomepageState extends State<Homepage> {
   // ];
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent, // Set status bar color to transparent
     ));
     return Scaffold(
       key: _scaffoldKey,
-      backgroundColor:Color(0xFFF4F4F4),
+      backgroundColor:const Color(0xFFF4F4F4),
       appBar: AppBar(
         elevation: 0,
         toolbarHeight: 62.h,
-        backgroundColor: Color(0xFFFFFFFF),
+        backgroundColor: const Color(0xFFFFFFFF),
         actions: [
            CustomAppbar(scaffoldKey: _scaffoldKey),
         ],
@@ -85,7 +85,7 @@ class _HomepageState extends State<Homepage> {
                 child:GridView.builder(
                     // scrollDirection: Axis.vertical,
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   padding: EdgeInsets.zero,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
@@ -97,7 +97,7 @@ class _HomepageState extends State<Homepage> {
                     itemCount: hotDealsList.length,
                     itemBuilder: (BuildContext context,int index){
                       return Card(
-                        shape: RoundedRectangleBorder(
+                        shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10),bottomRight:Radius.circular(10)), // adds rounded corners
                         ),
                         child: Column(
@@ -157,7 +157,7 @@ class _HomepageState extends State<Homepage> {
                               padding: EdgeInsets.only(top: 1.h,left: 30.w),
                               child: Row(
                                 children: [
-                                  Container(
+                                  SizedBox(
 
                                     // margin: EdgeInsets.only(top: 10.h,left: 30.w),
                                     height: 12.h,width:76.w,
@@ -169,8 +169,8 @@ class _HomepageState extends State<Homepage> {
                                       allowHalfRating: true,
                                       itemCount: 5,
                                       itemSize: 15.w,
-                                      itemPadding: EdgeInsets.symmetric(horizontal: .1),
-                                      itemBuilder: (context,_)=>Icon(Icons.star,color:Color(0xffFDC040) ,),
+                                      itemPadding: const EdgeInsets.symmetric(horizontal: .1),
+                                      itemBuilder: (context,_)=>const Icon(Icons.star,color:Color(0xffFDC040) ,),
 
                                       onRatingUpdate: (rating){},
 
@@ -180,7 +180,7 @@ class _HomepageState extends State<Homepage> {
                                     margin: EdgeInsets.only(left: 2.w,top: 2.h),
                                     height: 15.h,
                                     child: Text("(""${hotDealsList[index].ratingCount}"")",style: TextStyle(
-                                      color: Color(0xFF333333),
+                                      color: const Color(0xFF333333),
                                       fontSize: 12.sp,
                                       fontWeight: FontWeight.w400,
                                     ),),
@@ -204,12 +204,12 @@ class _HomepageState extends State<Homepage> {
           ],
         ),
       ),
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       bottomNavigationBar: Container(
         height: 58.99997,
         width: 360.w,
         // width: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.red,
           boxShadow: [BoxShadow(color: Colors.transparent)],
         ),
@@ -225,23 +225,23 @@ class _HomepageState extends State<Homepage> {
 
           elevation: 0,
           backgroundColor: Colors.transparent,
-          selectedItemColor: Color(0xffFF8800),
+          selectedItemColor: const Color(0xffFF8800),
           items:  <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Image.asset("assets/icon/bottom_nav_bar/home.png",height: 24.h,width: 24.w,),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset("assets/icon/bottom_nav_bar/profile.png",height: 24.h,width: 24.w,color:Color(0xffFF8800) ,),
+              icon: Image.asset("assets/icon/bottom_nav_bar/profile.png",height: 24.h,width: 24.w,color:const Color(0xffFF8800) ,),
               label: 'Profile',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset("assets/icon/bottom_nav_bar/Orderlist.png",height: 24.h,width: 24.w,color: Color(0xffFF8800),),
+              icon: Image.asset("assets/icon/bottom_nav_bar/Orderlist.png",height: 24.h,width: 24.w,color: const Color(0xffFF8800),),
               label: 'Order List',
 
             ),
             BottomNavigationBarItem(
-              icon: Image.asset("assets/icon/bottom_nav_bar/Cart.png",height: 24.h,width: 24.w,color: Color(0xffFF8800),),
+              icon: Image.asset("assets/icon/bottom_nav_bar/Cart.png",height: 24.h,width: 24.w,color: const Color(0xffFF8800),),
               label: 'Cart',
 
 

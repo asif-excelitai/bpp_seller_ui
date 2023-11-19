@@ -30,7 +30,7 @@ class HotDealsProduct extends StatelessWidget {
           itemCount: hotDealsList.length,
           itemBuilder: (BuildContext context,int index){
             return Card(
-              shape: RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10),bottomRight:Radius.circular(10)), // adds rounded corners
               ),
               child: Column(
@@ -90,7 +90,7 @@ class HotDealsProduct extends StatelessWidget {
                     padding: EdgeInsets.only(top: 1.h,left: 30.w),
                     child: Row(
                       children: [
-                        Container(
+                        SizedBox(
 
                           // margin: EdgeInsets.only(top: 10.h,left: 30.w),
                           height: 12.h,width:76.w,
@@ -102,8 +102,8 @@ class HotDealsProduct extends StatelessWidget {
                             allowHalfRating: true,
                             itemCount: 5,
                             itemSize: 15.w,
-                            itemPadding: EdgeInsets.symmetric(horizontal: .1),
-                            itemBuilder: (context,_)=>Icon(Icons.star,color:Color(0xffFDC040) ,),
+                            itemPadding: const EdgeInsets.symmetric(horizontal: .1),
+                            itemBuilder: (context,_)=>const Icon(Icons.star,color:Color(0xffFDC040) ,),
 
                             onRatingUpdate: (rating){},
 
@@ -113,7 +113,7 @@ class HotDealsProduct extends StatelessWidget {
                           margin: EdgeInsets.only(left: 2.w,top: 2.h),
                           height: 15.h,
                           child: Text("(""${hotDealsList[index].ratingCount}"")",style: TextStyle(
-                            color: Color(0xFF333333),
+                            color: const Color(0xFF333333),
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400,
                           ),),

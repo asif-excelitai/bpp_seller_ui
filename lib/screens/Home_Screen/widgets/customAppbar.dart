@@ -14,7 +14,7 @@ class CustomAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.fromLTRB(12.w, 20.h, 12.w, 8.h),
-      color: Color(0xFFFFFFFF),
+      color: const Color(0xFFFFFFFF),
       child: Row(
         children: [
           Padding(
@@ -23,7 +23,7 @@ class CustomAppbar extends StatelessWidget {
               onTap: (){
                 _scaffoldKey.currentState!.openDrawer();
               },
-              child: Container(
+              child: SizedBox(
                 height: 24.h,
                 width: 24.w,
                 child: Image.asset("assets/icon/appbar/drawer.png",width: 24.w,height: 24.h,),
@@ -34,10 +34,10 @@ class CustomAppbar extends StatelessWidget {
             width: 184.w,
             height: 34.h,
             decoration: BoxDecoration(
-              color: Color(0xFFFFFFFF),
+              color: const Color(0xFFFFFFFF),
               borderRadius: BorderRadius.circular(5),
               border: Border.all(
-                color: Color(0xffD9D9D9)
+                color: const Color(0xffD9D9D9)
               )
             ),
 
@@ -51,11 +51,11 @@ class CustomAppbar extends StatelessWidget {
                 ),
                 Padding(
                   padding:  EdgeInsets.only(top: 10.h,bottom: 9.h,left: 8.w),
-                  child: Container(
+                  child: SizedBox(
                     height: 15.h,
                     width: 112.w,
                    child: Text("Search in BPP Shop",style: TextStyle(
-                     color: Color(0xFFCACACA),
+                     color: const Color(0xFFCACACA),
                      fontSize:12.sp,
                      fontWeight: FontWeight.w400,
                    ),),
@@ -68,7 +68,7 @@ class CustomAppbar extends StatelessWidget {
                     width:27.8.w,
                     height: 34.h,
                     // color: Color(0xFFFF8800),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color: Color(0xFFFF8800),
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(4),
@@ -115,7 +115,7 @@ class CustomAppbar extends StatelessWidget {
                     child: InkWell(
                       child: Image.asset("assets/icon/appbar/user.png",width: 24.w,height: 24.h,),
                       onTap: (){
-                        showPopover(context: context, bodyBuilder:(context)=> ListItems1(),
+                        showPopover(context: context, bodyBuilder:(context)=> const ListItems1(),
                           transitionDuration: const Duration(milliseconds: 150),
                           direction: PopoverDirection.bottom,
                           width: 98.w,

@@ -5,7 +5,6 @@ import 'package:bpp_seller_ans/screens/Order_list/order_list.dart';
 import 'package:bpp_seller_ans/screens/Profile_screen/profile_screen.dart';
 import 'package:bpp_seller_ans/screens/cart_screen/Add_to_cart.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
@@ -27,10 +26,10 @@ class Myapp extends StatelessWidget {
           // home:  Homepage(),
           initialRoute: '/',
           routes: {
-            '/': (context)=> Homepage(),
-            '/second':(context)=>  Profile(),
-            '/third':(context)=>  OrderList(),
-            '/fourth':(context)=>  AddtoCart(),
+            '/': (context)=> const Homepage(),
+            '/second':(context)=>  const Profile(),
+            '/third':(context)=>  const OrderList(),
+            '/fourth':(context)=>  const AddtoCart(),
           },
         );
       },

@@ -24,7 +24,7 @@ class BestSelling extends StatelessWidget {
               child: Text("View more",style: TextStyle(
                 fontSize: 12.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xFFFF8800),
+                color: const Color(0xFFFF8800),
               ),),
             ),
             const HotDealsProduct(),

@@ -15,7 +15,7 @@ class _ProfileState extends State<Profile> {
       height: 800.h,
       width: 360.w,
       color: Colors.blueAccent,
-      child: Center(
+      child: const Center(
           child: Text("This is My Profile")),
     );
   }
