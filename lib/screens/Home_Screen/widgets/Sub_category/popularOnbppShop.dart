@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:bpp_seller_ans/utils/constant/text_property.dart';
-
 import '../../../../../Model/popular_products_model_image.dart';
 
 class PopularOnBppShop extends StatelessWidget {
