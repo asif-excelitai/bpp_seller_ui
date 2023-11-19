@@ -91,8 +91,8 @@ class _HomepageState extends State<Homepage> {
                         crossAxisCount: 2,
                         crossAxisSpacing:12.w,
                         mainAxisSpacing:12.w,
-                        mainAxisExtent: 315.w,
-                        childAspectRatio:322/162
+                        mainAxisExtent: 314.h,
+                        childAspectRatio:322.w/162.h,
                     ),
                     itemCount: hotDealsList.length,
                     itemBuilder: (BuildContext context,int index){

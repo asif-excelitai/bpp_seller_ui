@@ -73,7 +73,7 @@ class _HomepageCarousalSliderState extends State<HomepageCarousalSlider> {
                   size:  Size(20.0.w, 2.0.h),
                   activeSize: Size(20.0.w, 2.0.h),
                   color: const Color(0xff828282),
-                  activeColor: Colors.red,
+                  activeColor: Colors.orangeAccent,
 
                   activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0))
               ),

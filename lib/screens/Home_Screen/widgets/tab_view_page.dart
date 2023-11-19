@@ -17,61 +17,125 @@ class _TabPagesState extends State<TabPages> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     TabController tabController=TabController(length: 3, vsync: this);
-    return SizedBox(
-      width: 360.w,
-      child: Column(
-        children: [
-          Container(
-            // color: Colors.white10,
-            height: 40.h,
-                 decoration: const BoxDecoration(
-                    color: Colors.white10,
-                   borderRadius: BorderRadius.only(topRight: Radius.circular(10),topLeft: Radius.circular(10)),
-                 ),
-                 child: TabBar(
-                   labelColor: const Color(0xFFA6A6A6),
-                     indicatorColor: Colors.orangeAccent,
-                     automaticIndicatorColorAdjustment: true,
-                     indicatorSize: TabBarIndicatorSize.tab,
-                     labelStyle: TextStyle(
-                       color: const Color(0xFFA6A6A6),
-                       fontSize: 14.sp,
-                       fontWeight: FontWeight.w500
-                     ),
-                     indicator: const BoxDecoration(
-                       color: Color(0xFFFF8800),
-                       borderRadius: BorderRadius.only(
-                         topLeft: Radius.circular(10),
-                         topRight: Radius.circular(10),
-                       ),
-
-                     ),
-                     controller: tabController,
-                     tabs:const [
-                   Tab(text: 'Best Selling',),
-                   Tab(text: 'New Arrival',),
-                   Tab(text: 'Discount Products',),
-
-                 ]),
+    return Stack(
+      children: [
+        SizedBox(
+        width: 360.w,
+        height:422.h ,),
+        Positioned(
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 60.h,
+          child:Container(
+          // color: Colors.white10,
+          height: 40.h,
+          decoration: const BoxDecoration(
+            color: Colors.white10,
+            borderRadius: BorderRadius.only(topRight: Radius.circular(10),topLeft: Radius.circular(10)),
           ),
-           Container(
-              width: 360.h,
-              height:381.w ,
-             // height: MediaQuery.of(context).size.height - kToolbarHeight - kBottomNavigationBarHeight,
-             decoration: BoxDecoration(
-               borderRadius: BorderRadius.circular(10)
-             ),
-              child: TabBarView(
-                  physics: const NeverScrollableScrollPhysics(),
-                  controller: tabController,
-                  children:const [
-                    BestSelling(),
-                    Newarrival(),
-                    DiscountProduct(),
+          child: TabBar(
+              unselectedLabelColor:const Color(0xFFA6A6A6) ,
+              labelColor: const Color(0xFFffffff),
+              indicatorColor: Colors.orangeAccent,
+              automaticIndicatorColorAdjustment: true,
+              indicatorSize: TabBarIndicatorSize.tab,
+              labelStyle: TextStyle(
+                  color: const Color(0xFFffffff),
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w500
+              ),
+              indicator: const BoxDecoration(
+                color: Color(0xFFFF8800),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                ),
+
+              ),
+              controller: tabController,
+              tabs:const [
+                Tab(text: 'Best Selling',),
+                Tab(text: 'New Arrival',),
+                Tab(text: 'Discount Products',),
+
               ]),
-            ),
-        ],
-      ),
+        ),
+          ),
+        Positioned(
+          top: 47,
+          child: Container(
+          width: 360.h,
+          height:381.w ,
+          // height: MediaQuery.of(context).size.height - kToolbarHeight - kBottomNavigationBarHeight,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10)
+          ),
+          child: TabBarView(
+              physics: const NeverScrollableScrollPhysics(),
+              controller: tabController,
+              children:const [
+                BestSelling(),
+                Newarrival(),
+                DiscountProduct(),
+              ]),
+        ),)
+
+        // child: Column(
+        //   children: [
+        //     Container(
+        //       // color: Colors.white10,
+        //       height: 40.h,
+        //            decoration: const BoxDecoration(
+        //               color: Colors.white10,
+        //              borderRadius: BorderRadius.only(topRight: Radius.circular(10),topLeft: Radius.circular(10)),
+        //            ),
+        //            child: TabBar(
+        //              unselectedLabelColor:const Color(0xFFA6A6A6) ,
+        //              labelColor: const Color(0xFFffffff),
+        //                indicatorColor: Colors.orangeAccent,
+        //                automaticIndicatorColorAdjustment: true,
+        //                indicatorSize: TabBarIndicatorSize.tab,
+        //                labelStyle: TextStyle(
+        //                  color: const Color(0xFFffffff),
+        //                  fontSize: 12.sp,
+        //                  fontWeight: FontWeight.w500
+        //                ),
+        //                indicator: const BoxDecoration(
+        //                  color: Color(0xFFFF8800),
+        //                  borderRadius: BorderRadius.only(
+        //                    topLeft: Radius.circular(10),
+        //                    topRight: Radius.circular(10),
+        //                  ),
+        //
+        //                ),
+        //                controller: tabController,
+        //                tabs:const [
+        //              Tab(text: 'Best Selling',),
+        //              Tab(text: 'New Arrival',),
+        //              Tab(text: 'Discount Products',),
+        //
+        //            ]),
+        //     ),
+        //      Container(
+        //         width: 360.h,
+        //         height:381.w ,
+        //        // height: MediaQuery.of(context).size.height - kToolbarHeight - kBottomNavigationBarHeight,
+        //        decoration: BoxDecoration(
+        //          borderRadius: BorderRadius.circular(10)
+        //        ),
+        //         child: TabBarView(
+        //             physics: const NeverScrollableScrollPhysics(),
+        //             controller: tabController,
+        //             children:const [
+        //               BestSelling(),
+        //               Newarrival(),
+        //               DiscountProduct(),
+        //         ]),
+        //       ),
+        //   ],
+        // ),
+      ]
     );
   }
 }

@@ -17,6 +17,8 @@ PopularItem(imageId:1,image:"assets/icon/popularitem/Beef.png",name:"Beef"),
   PopularItem(imageId:10,image:"assets/icon/popularitem/Fresh Fruits.png",name:"Fresh Fruits"),
   PopularItem(imageId:11,image:"assets/icon/popularitem/Coffee.png",name:"Cofee"),
   PopularItem(imageId:12,image:"assets/icon/popularitem/Coffee.png",name:"Cofee"),
+  PopularItem(imageId:12,image:"assets/icon/popularitem/Coffee.png",name:"Cofee"),
+  PopularItem(imageId:12,image:"assets/icon/popularitem/Coffee.png",name:"Cofee"),
 
 
 ];

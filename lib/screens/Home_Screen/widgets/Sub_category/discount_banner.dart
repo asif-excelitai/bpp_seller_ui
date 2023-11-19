@@ -9,6 +9,7 @@ class DiscountBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.white,
       margin: EdgeInsets.only(top: 12.h),
       height: 122.h,
       child:Row(

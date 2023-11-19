@@ -25,7 +25,9 @@ class HotDealsProduct extends StatelessWidget {
               crossAxisCount: 1,
               // crossAxisSpacing:12.w,
               mainAxisSpacing:12.w,
-              childAspectRatio:322/162
+              childAspectRatio:322/162,
+            // mainAxisExtent: 152.w,
+            // crossAxisSpacing: 7.h
           ),
           itemCount: hotDealsList.length,
           itemBuilder: (BuildContext context,int index){
@@ -121,7 +123,10 @@ class HotDealsProduct extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const AddToCartButton()
+                  Padding(
+                    padding: EdgeInsets.only(top:8.2.h),
+                    child: const AddToCartButton(),
+                  )
 
                 ],
               ),
